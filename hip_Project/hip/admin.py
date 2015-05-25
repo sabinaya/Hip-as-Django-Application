@@ -1,3 +1,4 @@
 from django.contrib import admin
+from hip.models import board
 
-# Register your models here.
+admin.site.register(board)

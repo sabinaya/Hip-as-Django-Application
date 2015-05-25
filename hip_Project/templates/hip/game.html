@@ -2,17 +2,58 @@
 
 {% load staticfiles %}
 
-<html>
-
-    <head>
-        <title>Rango</title>
-    </head>
+<html lang="en">
+<head>
+  <title>Hip</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
 
     <body>
-        <h1>Hip says...</h1>
-        hello world! <strong>{{ boldmessage }}</strong><br />
-        <a href="/hip/about/">About</a><br />
-        <img src="{% static "images/blue.png" %}" alt="Blue pic" />
+        <div class="container-fluid">
+            <h1 style ="color:blue">Welcome</h1>
+            <form  method="POST" action=".">{% csrf_token %}
+                <input type="submit" name="Start" value="Start Game"><br/><br>
+                <p>
+                    <input type="image" name="1" value="submit" src="{{ STATIC_URL }}images/{{ img1 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="image" name="2" src="{{ STATIC_URL }}images/{{ img2 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="image" name="3" src="{{ STATIC_URL }}images/{{ img3 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+                <br/>
+                <p>
+                    <input type="image" name="4" src="{{ STATIC_URL }}images/{{ img4 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="image" name="5" src="{{ STATIC_URL }}images/{{ img5 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="image" name="6" src="{{ STATIC_URL }}images/{{ img6 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+                <br/>
+                <p>
+                    <input type="image" name="7" src="{{ STATIC_URL }}images/{{ img7 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="image" name="8" src="{{ STATIC_URL }}images/{{ img8 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="image" name="9" src="{{ STATIC_URL }}images/{{ img9 }}.png" height=100 width=100>&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+
+                <br/>
+
+
+                <p>
+                    <input type="submit" name="1" value="1">
+                    <input type="submit" name="2" value="2">
+                    <input type="submit" name="3" value="3">
+                </p>
+                <p>
+                    <input type="submit" name="4" value="4">
+                    <input type="submit" name="5" value="5">
+                    <input type="submit" name="6" value="6">
+                </p>
+                <p>
+                    <input type="submit" name="7" value="7">
+                    <input type="submit" name="8" value="8">
+                    <input type="submit" name="9" value="9">
+                </p>
+        </div>
     </body>
 
 </html>
