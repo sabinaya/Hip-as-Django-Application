@@ -9,6 +9,6 @@ Stratergy followed           : Computer vs Human (DONE)
 
 
 TODOS:	1. Pop an alert when the player loses or wins
-		2. Include instructions page
-		3. Style the game page more interactively
+	2. Include instructions page
+	3. Style the game page more interactively
 	   
