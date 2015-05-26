@@ -22,6 +22,21 @@ class board(models.Model):
 	def __unicode__(self):
 		return self.player
 
+	def refresh_Board(self):
+		self.img1 = "0"
+		self.img2 = "0"
+		self.img3 = "0"
+		self.img4 = "0"
+		self.img5 = "0"
+		self.img6 = "0"
+		self.img7 = "0"
+		self.img8 = "0"
+		self.img9 = "0"
+
+		self.player = "none"
+		self.game_over = "0"
+		self.save()
+
 	def root_Board(self):
 
 		data = []
@@ -78,9 +93,11 @@ class board(models.Model):
 			if(result == 1):
 				print "\nYou lose!"
 				self.game_over = 1
+				self.save()
 			elif(result == 2):
 				print "\nYou won!"
 				self.game_over = 2
+				self.save()
 
 	def populate_positions(self, board, player):
 		""" 
